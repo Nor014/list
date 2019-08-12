@@ -12,7 +12,7 @@ class Listning extends React.Component {
 
     return (
       <div className="item-list">
-        {items.map(item => item.state === 'active' &&
+        {items.filter(item => item.state === 'active').map(item =>
           < Item
             key={item.listing_id}
             url={item.url}
